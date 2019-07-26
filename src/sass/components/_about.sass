@@ -1,0 +1,103 @@
+.about
+	display: flex
+	margin: 0 -33px
+	&__video
+		padding: 0 33px
+		+fs(49.5%)
+	&__content
+		padding: 0 33px
+		+fs(50.05%)
+		color: #858696
+		p
+			letter-spacing: -0.01em
+			&:not(:last-child)
+				margin-bottom: 15px
+	&__innumbers
+		margin: 0 -6px
+		flex-wrap: wrap
+		display: flex
+	&__col
+		padding: 20px 6px 0
+		+fs(33.3%)
+	&__item
+		height: 100%
+
+.aboutitem
+	padding: 15px 14px 20px
+	background: #FFFFFF
+	box-shadow: 0 22px 66px -13px #CAE1DC
+	border-radius: 12px
+	&__icon
+		margin-bottom: 28px
+		width: 60px
+		height: 60px
+		background: rgba(#34DFBF, 0.1)
+		justify-content: center
+		display: flex
+		align-items: center
+		border-radius: 9px
+		img
+			max-width: 100%
+			display: block
+	&__title
+		font-weight: 600
+		font-size: 36px
+		line-height: 1.2
+		color: #34DFBF
+		letter-spacing: 0
+	&__text
+		margin-top: 4px
+		+f(14px, 500, 1.3)
+		letter-spacing: -0.02em
+.video
+	position: relative
+	overflow: hidden
+	cursor: pointer
+	user-select: none
+	border-radius: 8px
+	border: 2px solid #EDEFF3
+	background-color: #EDEFF3
+	+hover
+		.video__play
+			transform: scale(1.2)
+	video
+		width: 100%
+		height: 376px
+		display: block
+	&__play
+		position: absolute
+		z-index: 2
+		top: 50%
+		left: 50%
+		width: 50px
+		height: 50px
+		margin: -25px 0 0 -25px
+		border-radius: 50%
+		background-color: #51CEB6
+		transition: transform .3s
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 50%
+			transform: translate(-30%,-50%)
+			+arr(12,15,#fff,r)
+		.is-play &
+			opacity: 0
+			visibility: hidden
+	&__poster
+		position: absolute
+		z-index: 2
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		.is-play &
+			opacity: 0
+			visibility: hidden
+		img
+			width: 100%
+			height: 100%
+			display: block
+			object-fit: cover
+			object-position: center

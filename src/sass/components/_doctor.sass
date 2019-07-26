@@ -1,0 +1,102 @@
+.doctor
+	align-items: center
+	display: flex
+	&:not(:last-child)
+		margin-bottom: 50px
+	&__img
+		+fs(36.29%)
+		background: #EDEFF3
+		border-radius: 8px
+		overflow: hidden
+		img
+			width: 100%
+			height: 90%
+			object-fit: cover
+			object-position: center
+			display: block
+	&__img-wrap
+		background: #EDEFF3
+		border-radius: 8px
+		overflow: hidden
+		img
+			width: 100%
+			height: 10
+			align-self: flex-start
+			object-fit: cover
+			object-position: center
+			display: block
+	&__wrap
+		padding-left: 50px
+	&__hero
+		display: flex
+	&__hero-left
+		+fs(65%)
+	&__name
+		+fr
+		+f(30px,500,1.2)
+		display: inline-block
+	&__specializations
+		margin-right: -15px
+	&__experience
+		+fmt
+		margin-left: 20px
+		font-size: 16px
+		+f(16px,600,1.875)
+		display: inline-block
+		&_ml0
+			margin-left: 0
+	&__hero-right
+		text-align: right
+		+fs(35%)
+	&__rating
+		margin: 7px 0 7px 0
+		line-height: 1
+		.doctor__out &
+			margin: 0 0 0 10px
+	&__assessment
+		font-weight: 600
+		line-height: 1.625
+	&__quantity
+	&__row
+		margin-top: 20px
+		.doctor__right &
+			margin-top: 30px
+	&__col
+		&_mb
+			&:not(:last-child)
+				margin-bottom: 30px
+	&__label
+		margin-bottom: 4px
+		font-size: 14px
+		color: #858696
+		line-height: 2.1
+	&__footer
+		margin-top: 28px
+	&__out
+		margin-top: 20px
+		justify-content: space-between
+		align-items: center
+		display: flex
+	&__left
+		+fs(53%)
+		align-self: flex-start
+	&__right
+		margin-top: 30px
+		padding-left: 40px
+		+fs(47%)
+		align-self: flex-start
+
+.specialization
+	margin: 15px 15px 0 0
+	padding: 13px 20px
+	background-color: rgba(#01AFF0,.1)
+	transition: background-color .3s
+	border-radius: 6px
+	font-size: 16px
+	line-height: 1.1875
+	font-weight: 600
+	color: #01AFF0
+	display: inline-block
+a.specialization
+	+hover
+		background-color: rgba(#01AFF0,.2)

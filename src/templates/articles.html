@@ -1,0 +1,37 @@
+---
+title: Articles
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{% include "partials/_header.html" %}
+	<!-- begin section -->
+	<div class="section section_first section_last">
+		<div class="section__inner inner">
+			<h2 class="section__title title">Статьи</h2>
+			<div class="articles row">
+				{% for i in range(0,8) %}
+				<div class="articles__col col col-3">
+					<!-- begin item -->
+					<a href="#" class="item">
+						<span class="item__img">
+							<img src="./img/articles-img.png" alt="img">
+						</span>
+						<span class="item__title">Helen Keller A Teller And A Seller</span>
+						<span class="item__content">I have been questioned by many people to disclose some …</span>
+						<span class="item__date">31.09.2018</span>
+					</a>
+					<!-- end item -->
+				</div>
+				{% endfor %}
+			</div>
+			<div class="articles__footer">
+				<a href="#" class="btn btn_lg btn_green btn_w262">Еще статьи</a>
+			</div>
+		</div>
+	</div>
+	<!-- end section -->
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

@@ -1,0 +1,110 @@
+.main-reviews
+	&__row
+		margin: 0 -10px
+		flex-wrap: wrap
+		display: flex
+	&__col
+		margin-bottom: 20px
+		padding: 0 10px
+		+fs(33.3%)
+	&__footer
+		margin-top: 74px
+		text-align: center
+
+.review
+	padding: 20px
+	height: 100%
+	background: #F7F7F8
+	border-radius: 12px
+	flex-direction: column
+	justify-content: space-between
+	display: flex
+	&_lg
+		flex-direction: row
+	&_mb
+		&:not(:last-child)
+			margin-bottom: 20px
+	&__hero
+		margin-bottom: 20px
+		align-items: center
+		display: flex
+		.review_lg &
+			margin-bottom: 20px
+			justify-content: space-between
+	&__avatar
+		margin-right: 15px
+		flex-shrink: 0
+		width: 90px
+		height: 90px
+		border-radius: 50%
+		overflow: hidden
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+	&__name
+		line-height: 1.22
+		+fr
+	&__logo
+		margin-right: 25px
+		flex-shrink: 0
+		width: 90px
+		height: 90px
+		border-radius: 8px
+		overflow: hidden
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+	&__out
+		flex-grow: 1
+	&__text
+		color: #656674
+	&__images
+		margin-top: 20px
+		font-size: 0
+		white-space: nowrap
+		overflow: hidden
+		max-width: 360px
+	&__img
+		position: relative
+		width: 70px
+		height: 70px
+		display: inline-block
+		vertical-align: top
+		&:not(:first-child)
+			margin-left: 2px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+			display: block
+		.review-image-lenght
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			color: #fff
+			font-weight: 700
+			text-align: center
+			line-height: 70px
+			font-size: 18px
+			background: rgba(0,0,0,0.50)
+			span
+				font-weight: 400
+	&__footer
+		margin-top: 20px
+		color: #656674
+		.review_lg &
+			font-weight: 600
+
+.reviews-footer
+	margin-top: 40px
+	text-align: center
+	.btn
+		&:not(:last-child)
+			margin-right: 20px

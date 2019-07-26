@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="19px" viewBox="0 0 16 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Triangle</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Главная" transform="translate(-1244.000000, -5178.000000)" fill="#FFFFFF">
+            <g id="Group-51" transform="translate(0.000000, 5137.000000)">
+                <g id="Group-65" transform="translate(1160.000000, 25.000000)">
+                    <g id="Group-31-Copy-2" transform="translate(65.000000, 0.000000)">
+                        <g id="Group-30">
+                            <g id="vk">
+                                <path d="M29.5742765,19.6762701 L36.3808875,31.2475087 C36.892328,32.1169576 36.6021049,33.2363897 35.732656,33.7478303 C35.4519738,33.9129374 35.1322531,34 34.8066109,34 L21.1933891,34 C20.1846706,34 19.3669428,33.1822721 19.3669428,32.1735537 C19.3669428,31.8479115 19.4540054,31.5281908 19.6191125,31.2475087 L26.4257235,19.6762701 C26.937164,18.8068212 28.0565961,18.5165981 28.926045,19.0280386 C29.1937174,19.185493 29.4168222,19.4085977 29.5742765,19.6762701 Z" id="Triangle" transform="translate(28.000000, 25.500000) rotate(-270.000000) translate(-28.000000, -25.500000) "></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

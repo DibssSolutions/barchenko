@@ -1,0 +1,120 @@
+.header
+	&__inner
+		align-items: center
+		justify-content: space-between
+		display: flex
+	&__top
+		padding: 25px 0
+	&__logo
+		margin-right: 59px
+	&__address
+		margin-right: auto
+		font-size: 14px
+		span
+			margin-right: 10px
+			font-size: 12px
+			color: #45464D
+	&__soc
+		display: flex
+		.btn
+			&:not(:last-child)
+				margin-right: 15px
+	&__bottom
+		padding: 15px 0
+		color: $white
+		background-color: #181A21
+	&__servicesmenu
+	&__nav
+		padding: 0 10px
+	&__phone
+		font-weight: 600
+		font-size: 21px
+		color: #FFFFFF
+		letter-spacing: 1px
+		text-align: right
+		transition: opacity .3s
+		+hover
+			opacity: .6
+
+.logo
+	align-items: center
+	display: flex
+	img
+		margin-right: 40px
+		flex-shrink: 0
+		width: 52px
+		height: auto
+	&__wrap
+		flex-grow: 1
+		font-weight: 500
+	&__top
+		font-size: 25px
+		line-height: 1.25
+		color: #181A21
+		display: block
+	&__bottom
+		font-size: 14px
+		color: #858696
+		line-height: 1.285
+		display: block
+
+.servicesmenu
+	&__trigger
+		padding: 15px 35px
+		min-width: 190px
+		+fmt
+		font-weight: 500
+		font-size: 16px
+		text-align: left
+		color: #fff
+		background-color: #20232F
+		border-radius: 6px
+		transition: background-color .3s
+		+hover
+			background-color: lighten(#20232F,20%)
+	.icon
+		margin: 1px 20px 0 0
+		line-height: 1
+		vertical-align: top
+
+.nav
+	font-weight: 500
+	font-size: 16px
+	&__list
+		display: flex
+		flex-wrap: wrap
+	li
+		&:not(:last-child)
+			margin-right: 35px
+	a
+		color: currentColor
+		transition: opacity .3s
+		+hover
+			opacity: .6
+.soc
+	flex-wrap: wrap
+	display: flex
+	&__item
+		&:not(:last-child)
+			margin-right: 15px
+		a
+			width: 50px
+			height: 50px
+			line-height: 50px
+			text-align: center
+			border-radius: 10px
+			transition: background-color .3s
+			background-color: rgba(#1C1E25, .2)
+			display: block
+			+hover
+				background-color: rgba(#1C1E25, .15)
+			.soc_white &
+				background-color: rgba(#fff, 0.1)
+				border-radius: 6px
+				+hover
+					background-color: rgba(#fff, .15)
+		img
+			max-width: 80%
+			max-width: 80%
+			vertical-align: middle
+			display: inline-block

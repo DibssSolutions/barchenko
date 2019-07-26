@@ -1,0 +1,96 @@
+---
+title: Contacts
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{% include "partials/_header.html" %}
+	<!-- begin contacts -->
+	<div class="contacts">
+		<div class="contacts__inner inner">
+			<div class="contacts__left">
+				<h2 class="contacts__title title">Контакты</h2>
+				<div class="contacts__field">
+					<div class="contacts__label">Телефон</div>
+					<div class="contacts__item">+7 (916) 055-08-00</div>
+				</div>
+				<div class="contacts__field">
+					<div class="contacts__label">Адреса клиник</div>
+					<div class="contacts__item">г. Москва, Московский пр-т, д.44</div>
+					<div class="contacts__item">67 Sanford Ferry Apt. 612</div>
+					<div class="contacts__item">34 Jerde Manor Suite 967</div>
+					<div class="contacts__item">212 Ratke Forge</div>
+				</div>
+			</div>
+			<div class="contacts__map">
+				<img src="./img/map.jpg" alt="img">
+			</div>
+		</div>
+	</div>
+	<!-- end contacts -->
+	<!-- begin consultation -->
+	<div class="consultation">
+		<div class="consultation__inner inner consultation__inner_cont">
+			<div class="consultation__content">
+				<div class="consultation__wrap">
+					<h2 class="consultation__title">Остались вопросы?</h2>
+					<p>Закажите обратный звонок, и наш <br>менеджер сам свяжется с вами</p>
+				</div>
+				<div class="consultation__footer consultation__footer_mt">
+					<div class="consultation__label">Более</div>
+					<div class="consultation__numb">
+						<span>12,056</span>
+						<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						        <g transform="translate(-275.000000, -3603.000000)">
+						            <g transform="translate(0.000000, 3200.000000)">
+						                <g transform="translate(99.000000, 97.000000)">
+						                    <g transform="translate(0.000000, 271.000000)">
+						                        <g transform="translate(176.000000, 35.000000)">
+						                            <circle fill="#FFFFFF" cx="25" cy="25" r="25"></circle>
+						                            <polygon fill="#01AFF0" points="25 30 19.1221475 33.0901699 20.2447174 26.545085 15.4894348 21.9098301 22.0610737 20.954915 25 15 27.9389263 20.954915 34.5105652 21.9098301 29.7552826 26.545085 30.8778525 33.0901699"></polygon>
+						                        </g>
+						                    </g>
+						                </g>
+						            </g>
+						        </g>
+						    </g>
+						</svg>
+					</div>
+					<p>Обработаных заявок</p>
+				</div>	
+			</div>
+			<form class="consultation__form form">
+				<div class="form-row">
+					<div class="form-col">
+						<div class="form-control">
+							<div class="label">Ваше имя •</div>
+							<input type="text" class="input" name="contacts_name">
+						</div>
+					</div>
+					<div class="form-col">
+						<div class="form-control">
+							<div class="label">Телефон •</div>
+							<input type="text" class="input" name="contacts_phone">
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-col">
+						<div class="form-conf text-left">
+							<p class="form-conf__opacity">Нажимая на конпку, вы даете согласие на</p>
+							<p>обработку своих перс. данных</p>
+						</div>
+					</div>
+					<div class="form-col">
+						<button class="btn btn_lg btn_full btn_white-blue" type="button">Получить консультация</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- end consultation -->
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

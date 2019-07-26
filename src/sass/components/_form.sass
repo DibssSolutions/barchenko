@@ -1,0 +1,77 @@
+.form
+	&_appointment
+		padding: 30px 25px 25px
+		color: #fff
+		background: #01AFF0
+		box-shadow: 0 22px 66px -13px #E0E3E2
+		border-radius: 8px
+	&__title
+		position: relative
+		z-index: 1
+		margin: 0 auto 40px
+		max-width: 216px
+		+fr
+		+f(21px,500,1.2)
+		text-align: center
+.form-conf
+	margin-top: 15px
+	font-size: 12px
+	font-weight: 600
+	line-height: 1.6
+	text-align: center
+	&__opacity
+		font-weight: 400
+		opacity: .75
+.form-row
+	margin: 0 -10px
+	flex-wrap: wrap
+	display: flex
+	&:not(:last-child)
+		margin-bottom: 30px
+.form-field
+	position: relative
+	&:not(:last-child)
+		margin-bottom: 30px
+.form-col
+	padding: 0 10px
+	+fs(50%)
+.form-control
+	position: relative
+	font-size: 0
+.label
+	position: absolute
+	top: 0
+	left: 20px
+	font-size: 16px
+	transform: translateY(-50%)
+	padding: 0 12px
+	background: #01aff0
+.input,
+.textarea
+	padding: 0 20px
+	+fmt
+	+f(16px,700,1.1)
+	color: #fff
+	border: 2px solid #FFFFFF
+	// box-shadow: 0 22px 166px -23px rgba(202,225,220,0.55)
+	border-radius: 4px
+	height: 60px
+	width: 100%
+	background-color: transparent
+	display: inline-block
+.textarea
+	padding: 15px 20px
+	height: 100px
+	resize: none
+.form-footer
+	flex-wrap: wrap
+	display: flex
+	&:not(:last-child)
+		margin-bottom: 30px
+	& + .form-conf
+		margin-top: -15px
+	&__btn-file
+		margin-right: 30px
+		flex-grow: 1
+	&__submit
+		flex-shrink: 0

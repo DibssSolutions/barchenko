@@ -1,4 +1,142 @@
 body
-	background: #FFF
-	line-height: 1.4
+	+fmt
+	min-width: 1240px
+	color: #181A21
+	+f(16px,500,1.875)
+	+font-smoothing
+	+fadeout(.2s)
+	background: $white
+	&.is-loaded
+		+fadein
 
+.title
+	+fr
+	+f(44px,400,1.2)
+	letter-spacing: -0.02em
+
+.title-md
+	+fr
+	+f(30px,400,1.2)
+	letter-spacing: -0.01em
+
+.section
+	padding: 40px 0
+	&_first
+		padding-top: 60px
+	&_last
+		padding-bottom: 80px
+	&_pt0
+		padding-top: 0
+	&_p0
+		padding: 0
+	&_simpleslider
+		padding: 80px 0 20px
+	&__title
+		margin-bottom: 50px
+	&__head
+		margin-bottom: 40px
+		.section__title
+			margin-bottom: 15px
+
+.text-left
+	text-align: left !important
+
+.topic
+	padding: 60px 0 50px
+	&__link
+		position: relative
+		margin-left: 33px
+		+fr
+		+f(44px, 400, 1.2)
+		color: #181A21
+		transition: color .3s
+		letter-spacing: -0.002em
+		+hover
+			color: #01aff0
+			&:before
+				+arr(9,14,#01aff0,l)
+		&:before
+			position: absolute
+			content: ''
+			top: 19px
+			left: -33px
+			+arr(9,14,#181A21,l)
+			transition: border-color .3s
+
+.date
+	color: #656674
+
+article
+	h1,h2,h3,h4,h5,h6
+		+fr
+	h1,h2
+		&:not(:first-child)
+			margin-top: 80px
+		&:not(:last-child)
+			margin-bottom: 30px
+	h3, h4,h5,h6
+		&:not(:first-child)
+			margin-top: 30px
+		&:not(:last-child)
+			margin-bottom: 20px
+	h1
+		+f(54px,400,1.2)
+	h2
+		+f(44px,400,1.2)
+	h3
+		+f(30px,400,1.3)
+	h4
+		+f(24px,500,1.3)
+	h5
+		+f(22px,600,1.3)
+	h6
+		+f(18px,700,1.3)
+	p
+		&:not(:last-child)
+			margin-bottom: 15px
+	blockquote
+		padding: 30px 40px 30px
+		background: #FEEBEF
+		border-radius: 6px
+		&:not(:first-child)
+			margin-top: 30px
+		&:not(:last-child)
+			margin-bottom: 30px
+	ul
+		line-height: 1.875
+		&:not(:first-child)
+			margin-top: 30px
+		&:not(:last-child)
+			margin-bottom: 20px
+		li
+			position: relative
+			padding-left: 22px
+			&:not(:last-child)
+				margin-bottom: 4px
+			&:before
+				position: absolute
+				content: ''
+				top: 12px
+				left: 0
+				width: 3px
+				height: 3px
+				border-radius: 50%
+				background-color: #181A21
+	img
+		max-width: 100%
+		display: block
+		&:not(:first-child)
+			margin-top: 35px
+		&:not(:last-child)
+			margin-bottom: 40px
+		& + h1:not(:first-child),
+		& + h2:not(:first-child),
+		& + h3:not(:first-child)
+			margin-top: 30px
+	.date
+		margin-bottom: 30px
+	.simpleslider
+		&:not(:first-child)
+			margin-top: 40px
+		&:not(:last-child)
+			margin-bottom: 20px

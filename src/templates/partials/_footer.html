@@ -1,0 +1,73 @@
+<!-- begin footer -->
+<footer class="footer">
+	<div class="footer__top">
+		<div class="footer__inner inner">
+			<a href="#" class="footer__logo">
+				<img src="./img/logo.png" alt="logo">
+			</a>
+			<div class="footer__contacts">
+				<div class="footer__field">
+					<div class="footer__label">Телефон</div>
+					<div class="footer__item">+7 (916) 055-08-00</div>
+				</div>
+				<div class="footer__field">
+					<div class="footer__label">Адрес</div>
+					<div class="footer__item">Москва, ул. Пушкина д. 38, корп. 2</div>
+					<div class="footer__item">Москва, ул. Пушкина д. 38, корп. 2</div>
+				</div>
+			</div>
+			<div class="footer__soc">
+				<ul class="soc soc_white">
+					<li class="soc__item"><a href="#"><img src="./img/instagram-white.svg" alt="icon"></a></li>
+					<li class="soc__item"><a href="#"><img src="./img/play-white.svg" alt="icon"></a></li>
+					<li class="soc__item"><a href="#"><img src="./img/vk-white.svg" alt="icon"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer__middle">
+		<div class="footer__inner inner">
+			<div class="footer__row row">
+				<div class="footer__col col col-4">
+					<div class="footer__title">Карта сайта</div>
+					<nav class="footer__nav nav">
+						<ul class="nav__list">
+							{% for item in ['Главная','Доктора','Цены','Отзывы','Статьи','Примеры работ','Контакты'] %}
+							<li>
+								<a href="#">{{ item }}</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__col col col-4">
+					<div class="footer__title">Услуги</div>
+					<nav class="footer__services nav">
+						<ul class="nav__list">
+							{% for item in ['Хронические и острые боли в спине','Межреберная невралгия','Невралгия тройничного нерва','Головные боли'] %}
+							<li>
+								<a href="#">{{ item }}</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__col col col-4">
+					<div class="footer__buttons">
+						<a href="#" class="btn btn_green btn_full"><span>Заказать звонок</span></a>
+						<a href="#" class="btn btn_blue btn_sm btn_icon btn_full">
+							<img src="./img/skype.svg" alt="icon" class="btn__icon">
+							<span>Консультация по Skype</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer__bottom">
+		<div class="footer__inner inner">
+			<div class="copy">&copy;2019. Copyright</div>
+		</div>
+	</div>
+</footer>
+<!-- end footer -->

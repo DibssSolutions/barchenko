@@ -1,0 +1,35 @@
+---
+title: Exemples
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{% include "partials/_header.html" %}
+	<!-- begin section -->
+	<div class="section section_first section_last">
+		<div class="section__inner inner">
+			<h2 class="section__title title">Примеры работ</h2>
+			<div class="articles row">
+				{% for i in range(0,8) %}
+				<div class="articles__col col col-3">
+					<!-- begin item -->
+					<a href="#" class="item">
+						<span class="item__img">
+							<img src="./img/exemples-img.jpg" alt="img">
+						</span>
+						<span class="item__title item__title_sm">Спинальная мышечная атрофия Кугельберга-Веландера</span>
+					</a>
+					<!-- end item -->
+				</div>
+				{% endfor %}
+			</div>
+			<div class="articles__footer">
+				<a href="#" class="btn btn_lg btn_green btn_w262">Еще примеры</a>
+			</div>
+		</div>
+	</div>
+	<!-- end section -->
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

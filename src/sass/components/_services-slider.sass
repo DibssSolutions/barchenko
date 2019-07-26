@@ -1,0 +1,95 @@
+.services-slider
+	position: relative
+	padding: 56px 62px 100px 62px
+	color: #fff
+	background: #01AFF0
+	border-radius: 8px
+	background-size: cover
+	background-position: center
+	background-image: url("data:image/svg+xml,%0A%3Csvg width='600px' height='702px' viewBox='0 0 600 702' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Главная' transform='translate(-100.000000, -1386.000000)'%3E%3Cg id='Group-52' transform='translate(100.000000, 1284.000000)'%3E%3Cg id='Group-26' transform='translate(0.000000, 102.000000)'%3E%3Cg id='Group-25'%3E%3Cg id='Group-21'%3E%3Cpath d='M-225.000574,115.850863 C-283.66622,65.7715439 -264.111005,39.3010466 -166.334929,36.4393713 C-19.6708151,32.1468582 102.668519,-17.9324608 52.5880898,115.850863 C19.201137,205.039745 -73.3284177,205.039745 -225.000574,115.850863 Z' id='Path-2-Copy-3' fill='%23000000' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M404.840939,669.071199 C335.790381,610.172881 358.807234,579.040912 473.891497,575.675294 C646.517892,570.626867 790.513567,511.728548 731.567969,669.071199 C692.270904,773.9663 583.361893,773.9663 404.840939,669.071199 Z' id='Path-2-Copy-4' fill='%233BE9CC' opacity='0.400000006' transform='translate(555.500000, 654.242525) rotate(-75.000000) translate(-555.500000, -654.242525) '%3E%3C/path%3E%3Cpath d='M109.840939,-88.9288008 C40.7903809,-147.827119 63.8072335,-178.959088 178.891497,-182.324706 C351.517892,-187.373133 495.513567,-246.271452 436.567969,-88.9288008 C397.270904,15.9663 288.361893,15.9663 109.840939,-88.9288008 Z' id='Path-2-Copy-5' fill='%2351CEB6' opacity='0.200000003' transform='translate(260.500000, -103.757475) rotate(-75.000000) translate(-260.500000, 103.757475) '%3E%3C/path%3E%3Cpath d='M-81.2766051,14.9920184 C-140.306633,-35.402265 -120.629957,-62.0392433 -22.2465767,-64.9189166 C125.328494,-69.2384266 248.4277,-119.63271 198.036212,14.9920184 C164.441887,104.741837 71.3376147,104.741837 -81.2766051,14.9920184 Z' id='Path-2-Copy' fill='%2325E7C7' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M273.76791,888.708571 C189.434577,653.375237 216.76791,570.208571 355.76791,639.208571 C564.26791,742.708571 679.676606,629.271478 629.285119,763.896207 C595.690794,853.646026 477.185058,895.250147 273.76791,888.708571 Z' id='Path-2-Copy-2' fill='%23FFFFFF' opacity='0.200000003'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+	&__list
+		position: relative
+		font-size: 0
+		overflow: hidden
+		display: flex
+		&.slick-initialized
+			position: static
+			overflow: visible
+			display: block
+	&__title
+		margin-bottom: 40px
+		+f(30px,500,1.2)
+		+fr
+		letter-spacing: -0.01em
+		text-align: left
+	.slick-arrow
+		position: absolute
+		bottom: 30px
+		right: 62px
+		width: 40px
+		height: 40px
+		border-radius: 8px
+		font-size: 0
+		background-color: #fff
+		border-radius: 6px
+		transition: transform .3s, opacity .3s
+		+hover
+			opacity: .7
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 50%
+			transform: translate(-38%,-50%)
+			+arr(9,14,#01AFF0,r)
+	.slick-prev
+		right: 112px
+		&:before
+			transform: translate(-62%,-50%) rotate(180deg)
+	.slick-dots
+		position: absolute
+		left: 62px
+		bottom: 42px
+		flex-wrap: wrap
+		display: flex
+		li
+			&:not(:last-child)
+				margin-right: 10px
+			&.slick-active button
+				transform: scale(1)
+				opacity: 1
+		button
+			font-size: 0
+			width: 8px
+			height: 8px
+			opacity: .8
+			transform: scale(0.5)
+			transition: transform .3s, opacity .3s
+			border-radius: 50%
+			background-color: #fff
+	&_green
+		background-color: #34DFBF
+		background-image: url("data:image/svg+xml,%0A%3Csvg width='600px' height='702px' viewBox='0 0 600 702' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Главная' transform='translate(-740.000000, -1386.000000)'%3E%3Cg id='Group-52' transform='translate(100.000000, 1284.000000)'%3E%3Cg id='Group-26' transform='translate(0.000000, 102.000000)'%3E%3Cg id='Group-25-Copy' transform='translate(640.000000, 0.000000)'%3E%3Cg id='Group-21'%3E%3Cg id='Group-27' transform='translate(558.375552, -116.206117) rotate(-300.000000) translate(-558.375552, 116.206117) translate(261.875552, -412.706117)'%3E%3Cg id='Group-62' transform='translate(0.035555, 0.148352)'%3E%3Cpath d='M136.999426,512.527121 C78.3337801,462.447801 97.8889953,435.977304 195.665071,433.115629 C342.329185,428.823116 464.668519,378.743797 414.58809,512.527121 C381.201137,601.716003 288.671582,601.716003 136.999426,512.527121 Z' id='Path-2-Copy-3' fill='%23000000' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M279.068654,444.601209 C233.338601,349.796964 248.581952,299.686148 324.798706,294.268763 C439.123839,286.142685 534.487729,191.338439 495.449879,444.601209 C469.424646,613.443056 397.297571,613.443056 279.068654,444.601209 Z' id='Path-2-Copy' fill='%23FFFFFF' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M104.790462,340.40862 C-83.6221554,127.933479 260.41717,204.498437 278.963541,146.212228 C297.509913,87.9260196 594.47265,152.432467 535.527052,309.775119 C476.581454,467.11777 293.203079,552.883761 104.790462,340.40862 Z' id='Path-2-Copy-5' fill='%2301AFF0' opacity='0.200000003' transform='translate(295.915027, 296.074122) rotate(225.000000) translate(-295.915027, -296.074122) '%3E%3C/path%3E%3C/g%3E%3C/g%3E%3Cpath d='M-150.159061,602.328674 C-219.209619,543.430356 -196.192766,512.298387 -81.1085032,508.932769 C91.5178916,503.884342 235.513567,444.986023 176.567969,602.328674 C137.270904,707.223775 28.3618935,707.223775 -150.159061,602.328674 Z' id='Path-2-Copy-4' fill='%2301AFF0' opacity='0.200000003' transform='translate(0.500000, 587.500000) rotate(-75.000000) translate(-0.500000, -587.500000) '%3E%3C/path%3E%3Cpath d='M11.7679104,647.966046 C-72.5654229,412.632713 -45.2320896,329.466046 93.7679104,398.466046 C302.26791,501.966046 417.676606,388.528954 367.285119,523.153682 C333.690794,612.903501 215.185058,654.507622 11.7679104,647.966046 Z' id='Path-2-Copy-2' fill='%23FFFFFF' opacity='0.100000001' transform='translate(171.520266, 511.816326) rotate(-45.000000) translate(-171.520266, -511.816326) '%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+		.slick-arrow:before
+			+arr(9,14,#51CEB6,r)
+.services-item
+	padding: 21px 15px
+	min-width: 100%
+	color: #fff
+	font-size: 18px
+	line-height: 1.51
+	white-space: nowrap
+	text-overflow: ellipsis
+	overflow: hidden
+	background-color: #008CC0
+	border-radius: 6px
+	transition: background-color .3s
+	display: block
+	+hover
+		background-color: darken(#008CC0, 10%)
+	&_green
+		background-color: #20CAAE
+		+hover
+			background-color: darken(#20CAAE, 10%)
+	&:not(:last-child)
+		margin-bottom: 10px

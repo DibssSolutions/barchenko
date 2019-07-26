@@ -1,0 +1,62 @@
+---
+title: Reviews
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{% include "partials/_header.html" %}
+	<div class="inner">
+		<div class="wrap">
+			<div class="main-col">
+				<!-- begin section -->
+				<div class="section section_p0">
+					<div class="section__head">
+						<h2 class="section__title title">Отзывы пациентов о лечении</h2>
+						<p>SL–Клиника благодарит всех, кто дал согласие на публичное размещение своих историй</p>
+					</div>
+					<!-- begin reviews -->
+					<div class="reviews">
+						{% for i in range(0,4) %}
+						<!-- begin review -->
+						<div class="review review_mb review_lg">
+					    	<div class="review__logo">
+					    		<img src="./img/review-img-2.jpg" alt="avatar">
+					    	</div>
+					    	<div class="review__out">
+					    		<div class="review__hero review__hero_sb">
+					    			<div class="review__name">Danny Peters</div>
+					    			<div class="review__rating">rating</div>
+					    		</div>
+					    		<p class="review__text">I have been questioned by many people to disclose some of the greatest traffic generating techniques that I know of. I am not to immediate to reveal them because I know the majority doesn’t even take battle on them. </p>
+					    		<div class="review__images js-review-images">
+					    			{% for item in range(0,6) %}
+					    			<div class="review__img js-review-image">
+					    				<img src="./img/review-img.png" alt="img">
+					    			</div>
+					    			{% endfor %}
+					    		</div>
+					    		<div class="review__footer">
+					    			<div class="review__date date">31.09.2018</div>
+					    		</div>
+					    	</div>
+						</div>
+						<!-- end review -->
+						{% endfor %}
+					</div>
+					<!-- end reviews -->
+					<div class="reviews-footer">
+						<a href="#" class="btn btn_lg btn_green btn_w262">Еще 20 отзывы</a>
+						<a href="#" class="btn btn_lg btn_black btn_w262">Оставить отзыв</a>
+					</div>
+				</div>
+				<!-- end section -->
+			</div>
+			<div class="sidebar">
+				{% include "partials/_anappointment-form.html" %}
+			</div>
+		</div>
+	</div>
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

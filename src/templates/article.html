@@ -1,0 +1,95 @@
+---
+title: Doctor
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{% include "partials/_header.html" %}
+	<div class="inner">
+		<div class="topic">
+			<a href="#" class="topic__link">Статьи</a>
+		</div>
+		<div class="wrap wrap_pt0">
+			<div class="main-col">
+				<article>
+					<h3>Боль в пояснице отдаёт в ногу: как лечить?</h3>
+					<div class="date">31.09.2018</div>
+					<p>Такая боль называется люмбоишиалгия и встречается у многих людей, старше 30 лет.</p>
+					<p>Причина — в современном образе жизни. В течение дня мы долгое время проводим в напряжении —  сидя или стоя. Кто-то после работы нагружает себя дальше в спортзале или в бассейне, а кто-то идёт домой и вновь продолжает сидеть, но уже у телевизора. Наша спина не получает полноценного расслабления в течение дня и отвечает нам болью, которая часто отдаёт (иррадиирует) в ногу. Для определения причин боли пациент обращается к специалистам различного профиля.</p>
+					<img src="./img/article-img-3.jpg" alt="article-img">
+					<h3>Симптомы люмбоишиалгии:</h3>
+					<ul>
+						<li>Боль в пояснице — тянущая, ноющая или жгучая</li>
+						<li>Усиливается при нагрузках, отдает в ногу – в тазобедренный, коленный, голеностопный сустав</li>
+						<li>Онемение в ноге</li>
+						<li>Побледнение и истончение кожи на ноге</li>
+						<li>Больно ходить и наступать на ногу</li>
+						<li>Жар или озноб</li>
+					</ul>
+					<blockquote>У пациента возможны все симптомы сразу или по отдельности. Каждый из них может говорить не только о том, что у пациента люмбоишиалгия, но и о других нарушениях. В большинстве случаев перечисленные симптомы связаны с патологиями в позвоночнике, но причины могут быть различны.</blockquote>
+					<p>Такая боль называется люмбоишиалгия и встречается у многих людей, старше 30 лет.</p>
+					<p>Причина — в современном образе жизни. В течение дня мы долгое время проводим в напряжении —  сидя или стоя. Кто-то после работы нагружает себя дальше в спортзале или в бассейне, а кто-то идёт домой и вновь продолжает сидеть, но уже у телевизора. Наша спина не получает полноценного расслабления в течение дня и отвечает нам болью, которая часто отдаёт (иррадиирует) в ногу. Для определения причин боли пациент обращается к специалистам различного профиля.</p>
+				</article>
+			</div>
+			<div class="sidebar">
+				{% include "partials/_anappointment-form.html" %}
+				<div class="sidebar__field">
+					<div class="title-md">Другие примеры</div>
+					{% for i in range(0,5) %}
+					<!-- begin item -->
+					<a href="#" class="itemsm">
+						<span class="itemsm__wrap">
+							<span class="itemsm__title">Party Jokes Startling But Unnecessary</span>
+							<span class="date">31.09.2018</span>
+						</span>
+						<span class="itemsm__img">
+							<img src="./img/article-img.jpg" alt="img">
+						</span>
+					</a>
+					<!-- end item -->
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<!-- begin section -->
+		<div class="section section_pt0 section_last">
+			<div class="section__inner inner">
+				<h2 class="section__title title">Услуги нашей клиники</h2>
+				<div class="section__row row">
+					<div class="section__col col col-6">
+						<div class="services-slider">
+							<h4 class="services-slider__title">Консервативное лечен</h4>
+							<div class="services-slider__list js-services-slider">
+								{% for i in range(0,3) %}
+								<div class="services-slider__slide">
+									{% for i in range(0,6) %}
+									    <a href="#" class="services-item">Хронические и острые боли в спине</a>
+									{% endfor %}
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+					<div class="section__col col col-6">
+						<div class="services-slider services-slider_green">
+							<h4 class="services-slider__title">Херургическое лечени</h4>
+							<div class="services-slider__list js-services-slider">
+								{% for i in range(0,3) %}
+								<div class="services-slider__slide">
+									{% for i in range(0,6) %}
+									    <a href="#" class="services-item services-item_green">Хронические и острые боли в спине</a>
+									{% endfor %}
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end section -->
+	</div>
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

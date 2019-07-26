@@ -1,0 +1,83 @@
+.articles
+	&__col
+		margin-bottom: 60px
+	&__footer
+		margin-top: 20px
+		text-align: center
+.item
+	color: #181A21
+	display: block
+	+hover
+		.item__img img
+			transform: scale(1.1)
+			opacity: 0.9
+		.item__title
+			color: #01aff0
+	& > span
+		display: block
+	&__img
+		position: relative
+		margin-bottom: 20px
+		overflow: hidden
+		height: 220px
+		border-radius: 6px
+		img
+			position: relative
+			width: 100%
+			height: 100%
+			transition: transform .3s, opacity .3s
+			object-fit: cover
+			object-position: center
+			display: block
+			+gpu
+	&__title
+		+f(21px,600,1.19)
+		min-height: 50px
+		transition: color .3s
+		&:not(:last-child)
+			margin-bottom: 10px
+		&_sm
+			+f(18px,600,1.44)
+	&__content
+		color: #656674
+	&__date
+		margin-top: 20px
+		color: #656674
+
+.itemsm
+	display: flex
+	color: #181A21
+	+hover
+		.itemsm__img img
+			transform: scale(1.1)
+			opacity: 0.9
+		.itemsm__title
+			color: #01aff0
+	&__wrap
+		flex-grow: 1
+		overflow: hidden
+		display: block
+	&__title
+		margin-bottom: 10px
+		letter-spacing: 0
+		+f(18px,600,1.2)
+		display: block
+		transition: color .3s
+	&__img
+		margin-left: 30px
+		flex-shrink: 0
+		flex-direction: 0
+		width: 90px
+		height: 90px
+		border-radius: 6px
+		overflow: hidden
+		display: block
+		img
+			position: relative
+			width: 100%
+			height: 100%
+			transition: transform .3s, opacity .3s
+			object-fit: cover
+			object-position: center
+			display: block
+			+gpu

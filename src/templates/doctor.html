@@ -1,0 +1,128 @@
+---
+title: Doctor
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{% include "partials/_header.html" %}
+	<div class="inner">
+		<div class="topic">
+			<a href="#" class="topic__link">Наши врачи</a>
+		</div>
+		<div class="wrap wrap_pt0">
+			<div class="main-col">
+				<div class="doctor">
+					<div class="doctor__left">
+						<div class="doctor__img-wrap">
+							<img src="./img/doctor-1.png" alt="img">
+						</div>
+						
+						<div class="doctor__out">
+							<div class="doctor__assessment">Потрясающий врач </div>
+							<div class="doctor__rating">
+								<input type="hidden" class="js-rating rating" value="4" data-readonly/>
+							</div>
+						</div>
+						<div class="doctor__quantity">на основе 140 отзывов</div>
+					</div>
+					<div class="doctor__right">
+						<div class="doctor__name">Вадим Дмитриевич</div>
+						<div class="doctor__specializations">
+							<span class="specialization">Врач ЛФК</span>
+							<span class="specialization">Cпинальный хирург</span>
+						</div>
+						<div class="doctor__row row">
+							<div class="doctor__col doctor__col_mb col col-12">
+								<div class="doctor__label">Образование</div>
+								<div class="doctor__experience doctor__experience_ml0">опыт 25 лет</div>
+							</div>
+							<div class="doctor__col doctor__col_mb col col-12">
+								<div class="doctor__label">Методы лечения:</div>
+								<p>There’s a new hairstyle that seems to be sweeping Hollywood: what would you be willing to do to get it for yourself </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sidebar">
+				{% include "partials/_anappointment-form.html" %}
+			</div>
+		</div>
+		<article>
+			<h2>Образование</h2>
+			<p>В 1992 году окончил Оренбургский государственный институт.</p>
+			<p>С 1993 года специализации по нейрохирургии ГИДУВ г. Новокузнецка.</p>
+			<p>1994 — 1996 клиническая ординатура по нейрохирургии в ГИДУВ г. Новокузнецка у проф. Луцика А.А.</p>
+			<p>С 1996 по 1998 нейрохирург МСЧ «Салаватнефтемаш» в травматологическом отделении.</p>
+			<p>1998 г. — стажировка по программе GICD во Франции у профессоров J.Dubousset, Y. Cotrel, R. Passuty по хирургии позвоночника.</p>
+			<p>С 1999 по 2000 г. врач-ассистент в клинике профессора D. Chopin, институт Кале, Берк-сюр-Мер, Франция.</p>
+			<p>2003 г. – специализация по травматологии-ортопедии.</p>
+			<h2>Повышение квалификации</h2>
+			<p>С 1999 по 2000 г. врач-ассистент в клинике профессора D. Chopin, институт Кале, Берк-сюр-Мер, Франция.</p>
+			<p>2003 г. – специализация по травматологии-ортопедии.</p>
+		</article>
+		<div class="section section_simpleslider">
+			<div class="section__title title">Повышение квалификации</div>
+			<div class="simpleslider js-simpleslider">
+				{% for i in range(0,7) %}
+				    <div class="simpleslider__slide">
+				    	<a href="#" class="simpleslider__img">
+				    		<img src="./img/sertificat.jpg" alt="img">
+				    	</a>
+				    	<div class="simpleslider__title">Cпинальный хирург</div>
+				    	<div class="simpleslider__text">12 месяцев</div>
+				    </div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="wrap">
+			<div class="main-col">
+				<!-- begin section -->
+				<div class="section section_p0">
+					<h2 class="section__title title">Отзывы</h2>
+					<!-- begin reviews -->
+					<div class="reviews">
+						{% for i in range(0,3) %}
+						<!-- begin review -->
+						<div class="review review_mb review_lg">
+					    	<div class="review__logo">
+					    		<img src="./img/review-img-2.jpg" alt="avatar">
+					    	</div>
+					    	<div class="review__out">
+					    		<div class="review__hero review__hero_sb">
+					    			<div class="review__name">Danny Peters</div>
+					    			<div class="review__rating">rating</div>
+					    		</div>
+					    		<p class="review__text">I have been questioned by many people to disclose some of the greatest traffic generating techniques that I know of. I am not to immediate to reveal them because I know the majority doesn’t even take battle on them. </p>
+					    		<div class="review__images js-review-images">
+					    			{% for item in range(0,6) %}
+					    			<div class="review__img js-review-image">
+					    				<img src="./img/review-img.png" alt="img">
+					    			</div>
+					    			{% endfor %}
+					    		</div>
+					    		<div class="review__footer">
+					    			<div class="review__date date">31.09.2018</div>
+					    		</div>
+					    	</div>
+						</div>
+						<!-- end review -->
+						{% endfor %}
+					</div>
+					<!-- end reviews -->
+					<div class="reviews-footer">
+						<a href="#" class="btn btn_lg btn_green btn_w262">Еще 20 отзывы</a>
+						<a href="#" class="btn btn_lg btn_black btn_w262">Оставить отзыв</a>
+					</div>
+				</div>
+				<!-- end section -->
+			</div>
+			<div class="sidebar">
+				{% include "partials/_anappointment-form.html" %}
+			</div>
+		</div>
+	</div>
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

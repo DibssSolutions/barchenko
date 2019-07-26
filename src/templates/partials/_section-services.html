@@ -1,0 +1,37 @@
+<!-- begin section -->
+<div class="section">
+	<div class="section__inner inner">
+		<h2 class="section__title title">Услуги нашей клиники</h2>
+		<div class="section__row row">
+			<div class="section__col col col-6">
+				<div class="services-slider">
+					<h4 class="services-slider__title">Консервативное лечен</h4>
+					<div class="services-slider__list js-services-slider">
+						{% for i in range(0,3) %}
+						<div class="services-slider__slide">
+							{% for i in range(0,6) %}
+							    <div class="services-item">Хронические и острые боли в спине</div>
+							{% endfor %}
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="section__col col col-6">
+				<div class="services-slider services-slider_green">
+					<h4 class="services-slider__title">Херургическое лечени</h4>
+					<div class="services-slider__list js-services-slider">
+						{% for i in range(0,3) %}
+						<div class="services-slider__slide">
+							{% for i in range(0,6) %}
+							    <div class="services-item services-item_green">Хронические и острые боли в спине</div>
+							{% endfor %}
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end section -->

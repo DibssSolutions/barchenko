@@ -1,0 +1,51 @@
+---
+title: Price
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{% include "partials/_header.html" %}
+	<div class="inner">
+		<div class="wrap">
+			<div class="main-col">
+				<!-- begin section -->
+				<div class="section section_p0">
+					<h2 class="section__title title">Отзывы пациентов о лечении</h2>
+					<div data-accordion-group>
+						<div class="accordeon" data-accordion-item>
+							<div class="accordeon__trigger" data-accordion-trigger>
+								trigger
+							</div>
+							<div class="accordeon__container" data-accordion-container>
+								container
+							</div>
+						</div>
+						<div class="accordeon" data-accordion-item>
+							<div class="accordeon__trigger" data-accordion-trigger>
+								trigger
+							</div>
+							<div class="accordeon__container" data-accordion-container>
+								container
+							</div>
+						</div>
+						<div class="accordeon" data-accordion-item>
+							<div class="accordeon__trigger" data-accordion-trigger>
+								trigger
+							</div>
+							<div class="accordeon__container" data-accordion-container>
+								container
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end section -->
+			</div>
+			<div class="sidebar">
+				{% include "partials/_anappointment-form.html" %}
+			</div>
+		</div>
+	</div>
+	{% include "partials/_footer.html" %}
+
+{% endblock %}
