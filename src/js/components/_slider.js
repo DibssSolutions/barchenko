@@ -22,7 +22,33 @@ simpleslider.each((i,el) => {
 	  speed: 400,
 	  slidesToShow: $(el).data('slideshow') || 4,
 	  slideToScroll: 1,
-	  autoplay: false
+	  autoplay: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          variableWidth: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          variableWidth: true
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: true
+        }
+      }
+    ]
   });
 
 });

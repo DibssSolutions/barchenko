@@ -1,4 +1,6 @@
 .main-reviews
+	+sm
+		padding-bottom: 10px
 	&__row
 		margin: 0 -10px
 		flex-wrap: wrap
@@ -7,9 +9,18 @@
 		margin-bottom: 20px
 		padding: 0 10px
 		+fs(33.3%)
+		+md
+			+fs(50%)
+		+sm
+			+fs(100%)
 	&__footer
 		margin-top: 74px
 		text-align: center
+		+sm
+			margin-top: 20px
+		.btn
+			+sm
+				width: 100%
 
 .review
 	padding: 20px
@@ -19,8 +30,12 @@
 	flex-direction: column
 	justify-content: space-between
 	display: flex
+	+sm
+		margin: 0 -15px
 	&_lg
 		flex-direction: row
+		+sm
+			flex-direction: column
 	&_mb
 		&:not(:last-child)
 			margin-bottom: 20px
@@ -28,9 +43,10 @@
 		margin-bottom: 20px
 		align-items: center
 		display: flex
+		&_sb
+			justify-content: space-between
 		.review_lg &
 			margin-bottom: 20px
-			justify-content: space-between
 	&__avatar
 		margin-right: 15px
 		flex-shrink: 0
@@ -45,6 +61,7 @@
 			object-position: center
 	&__name
 		line-height: 1.22
+		font-size: 18px
 		+fr
 	&__logo
 		margin-right: 25px
@@ -68,12 +85,17 @@
 		white-space: nowrap
 		overflow: hidden
 		max-width: 360px
+		+sm
+			max-width: 334px
 	&__img
 		position: relative
 		width: 70px
 		height: 70px
 		display: inline-block
 		vertical-align: top
+		+sm
+			width: 65px
+			height: 65px
 		&:not(:first-child)
 			margin-left: 2px
 		img
@@ -106,5 +128,9 @@
 	margin-top: 40px
 	text-align: center
 	.btn
+		+sm
+			width: 100%
 		&:not(:last-child)
-			margin-right: 20px
+			margin-right: 15px
+			+sm
+				margin: 0 0 20px

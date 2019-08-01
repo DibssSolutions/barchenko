@@ -1,6 +1,8 @@
 .simpleslider
 	margin: 0 -20px
 	display: flex
+	+sm
+		margin: 0 -10px
 	.slick-list
 		overflow: visible !important
 	.slick-arrow
@@ -17,6 +19,8 @@
 		border-radius: 6px
 		transition: box-shadow .3s
 		box-shadow: 0 10px 43px -9px #6B706F
+		+sm
+			right: 10px
 		+hover
 			box-shadow: 0 15px 35px -7px #6B706F
 		&:before
@@ -28,10 +32,14 @@
 			+arr(12,17,#01AFF0,r)
 	.slick-prev
 		left: 20px
+		+sm
+			left: 10px
 		&:before
 			transform: translate(-62%,-50%) rotate(180deg)
 	&_p20
-		margin: 0 -10px
+		margin: 20px -10px 0
+		+sm
+			margin-top: 20px
 		.slick-arrow
 			right: 10px
 		.slick-prev
@@ -42,10 +50,15 @@
 		padding: 0 20px
 		color: #181A21
 		+fs(25%)
+		+md
+			padding: 0 10px
+			max-width: 250px
 		.simpleslider_p20 &
 			padding: 0 10px
 		.slick-initialized &
 			+fs(100%)
+			+md
+				max-width: 270px
 	&__img
 		margin-bottom: 25px
 		display: block

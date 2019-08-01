@@ -5,5 +5,40 @@
 [data-accordion-container]
 	display: none
 .accordeon
+	+md
+		margin: 0 -15px
+	&:not(:last-child)
+		margin-bottom: 20px
 	&__trigger
+		position: relative
+		padding: 25px 55px 30px
+		background-color: #F7F7F8
+		border-radius: 6px
+		cursor: pointer
+		font-size: 25px
+		color: #FFFFFF
+		letter-spacing: 0
+		color: #181A21
+		transition: background-color .3s, color .3s, border-radius .3s
+		+md
+			padding: 13px 15px
+			font-size: 21px
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			right: 30px
+			margin-top: -4px
+			+arr(14,9,#181A21,b)
+			transition: transform .3s
+		.is-open &
+			border-radius: 6px 6px 0 0
+			text-align: left
+			color: #fff
+			background-color: #38CFAB
+			&:before
+				+rotate(180)
+				+arr(14,9,#fff,b)
 	&__container
+		border-radius: 0 0 6px 6px
+		overflow: hidden

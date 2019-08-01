@@ -1,24 +1,36 @@
 .about
 	display: flex
 	margin: 0 -33px
+	+md
+		flex-direction: column
 	&__video
 		padding: 0 33px
 		+fs(49.5%)
+		+md
+			+fs(100%)
 	&__content
 		padding: 0 33px
 		+fs(50.05%)
 		color: #858696
+		+md
+			margin-top: 24px
+			+fs(100%)
 		p
 			letter-spacing: -0.01em
 			&:not(:last-child)
 				margin-bottom: 15px
 	&__innumbers
-		margin: 0 -6px
+		margin: 20px -6px 0
 		flex-wrap: wrap
 		display: flex
 	&__col
-		padding: 20px 6px 0
+		padding: 0 6px
 		+fs(33.3%)
+		+sm
+			+fs(100%)
+		&:not(:last-child)
+			+sm
+				margin-bottom: 10px
 	&__item
 		height: 100%
 
@@ -27,6 +39,12 @@
 	background: #FFFFFF
 	box-shadow: 0 22px 66px -13px #CAE1DC
 	border-radius: 12px
+	+sm
+		padding: 24px 20px
+		justify-content: space-between
+		display: flex
+		align-items: flex-start
+		flex-wrap: wrap
 	&__icon
 		margin-bottom: 28px
 		width: 60px
@@ -36,6 +54,9 @@
 		display: flex
 		align-items: center
 		border-radius: 9px
+		+sm
+			margin: 0 17px 0 0
+			flex-shrink: 0
 		img
 			max-width: 100%
 			display: block
@@ -45,10 +66,16 @@
 		line-height: 1.2
 		color: #34DFBF
 		letter-spacing: 0
+		+sm
+			+fs(calc(100% - 77px))
 	&__text
 		margin-top: 4px
 		+f(14px, 500, 1.3)
 		letter-spacing: -0.02em
+		+sm
+			margin-top: -13px
+			+fs(calc(100% - 77px))
+			margin-left: auto
 .video
 	position: relative
 	overflow: hidden

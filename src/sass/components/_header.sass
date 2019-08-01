@@ -5,27 +5,64 @@
 		display: flex
 	&__top
 		padding: 25px 0
+		+lg
+			padding: 20px 0
 	&__logo
 		margin-right: 59px
+		+lg
+			margin-right: 15px
 	&__address
 		margin-right: auto
 		font-size: 14px
+		.header__nav &
+			+lg
+				margin-top: 30px
 		span
 			margin-right: 10px
 			font-size: 12px
 			color: #45464D
+			.header__nav &
+				+lg
+					color: rgba(#fff,.5)
 	&__soc
 		display: flex
+		.header__nav &
+			+lg
+				margin-top: 40px
+				display: flex
+				justify-content: space-between
+				align-items: flex-start
+			+xs
+				flex-direction: column
 		.btn
 			&:not(:last-child)
 				margin-right: 15px
+				+xs
+					margin: 0 0 15px
 	&__bottom
+		position: relative
 		padding: 15px 0
 		color: $white
 		background-color: #181A21
-	&__servicesmenu
+		+lg
+			padding: 10px 0
 	&__nav
 		padding: 0 10px
+		+lg
+			position: absolute
+			top: 100%
+			left: 0
+			padding: 20px 15px 25px
+			z-index: 10
+			+fadeout(.3s)
+			width: 100vw
+			background-color: #181A21
+			box-shadow: 0 12px 16px 0 rgba(#000, .2)
+			.header.is-open &
+				+fadein
+		.btn
+			+sm
+				padding: 11px 15px
 	&__phone
 		font-weight: 600
 		font-size: 21px
@@ -35,6 +72,64 @@
 		transition: opacity .3s
 		+hover
 			opacity: .6
+		&_lgicon
+			+lg
+				font-size: 0
+		.header__nav &
+			+lg
+				margin-top: 56px
+				font-size: 30px
+				line-height: 1.2
+				text-align: left
+			+xs
+				font-size: 26px
+
+.btn-menu
+	position: relative
+	flex-shrink: 0
+	width: 40px
+	height: 40px
+	vertical-align: top
+	display: inline-block
+	background: #20232F
+	border-radius: 5px
+	&__wrap
+		position: absolute
+		left: 11px
+		top: 13px
+		width: 18px
+		height: 14px
+		transition: transform .3s
+		.header.is-open &
+			transform: translateX(3px)
+	&__line
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 2px
+		background-color: #fff
+		display: block
+		border-radius: 2px
+		transition: transform .3s, opacity .3s
+		&:first-child
+			top: 0
+			transform-origin: top left
+			.header.is-open &
+				transform: rotate(45deg) translate(0, 0)
+		&:nth-child(2)
+			top: 6px
+			transform-origin: left
+			.header.is-open &
+				opacity: 0
+				transform: scaleX(0)
+		&:last-child
+			top: auto
+			bottom: 0
+			transform-origin: bottom left
+			.header.is-open &
+				transform: rotate(-45deg) translate(0, 0)
+
 
 .logo
 	align-items: center
@@ -44,6 +139,9 @@
 		flex-shrink: 0
 		width: 52px
 		height: auto
+		+lg
+			margin-right: 11px
+			width: 35px
 	&__wrap
 		flex-grow: 1
 		font-weight: 500
@@ -52,13 +150,22 @@
 		line-height: 1.25
 		color: #181A21
 		display: block
+		+lg
+			margin-bottom: 4px
+			font-size: 21px
+			line-height: 1.2
 	&__bottom
 		font-size: 14px
 		color: #858696
 		line-height: 1.285
 		display: block
+		+lg
+			font-size: 10px
+			line-height: 1.3
 
 .servicesmenu
+	z-index: 3
+	color: #181A21
 	&__trigger
 		padding: 15px 35px
 		min-width: 190px
@@ -72,40 +179,119 @@
 		transition: background-color .3s
 		+hover
 			background-color: lighten(#20232F,20%)
-	.icon
-		margin: 1px 20px 0 0
-		line-height: 1
-		vertical-align: top
+		.servicesmenu.is-open &
+			background-color: lighten(#20232F,20%)
+		.icon
+			margin: 1px 20px 0 0
+			line-height: 1
+			vertical-align: top
+	&__menu
+		position: absolute
+		top: 100%
+		left: 0
+		width: 100vw
+		+fadeout(.3s)
+		.servicesmenu.is-open &
+			+fadein
+	&__wrap
+		padding: 55px 35px 116px
+		background: #FFFFFF
+		display: flex
+		box-shadow: 0 22px 66px -13px #E0E3E2
+		border-radius: 0 0 6px 6px
+		+sm
+			padding: 30px 15px
+			flex-direction: column
+		.no-touch &
+			margin-left: -15px
+			+sm
+				margin: 0 -15px
+	&__col
+		+fs(calc(50% - 90px))
+		padding-right: 30px
+		flex-grow: 1
+		overflow: hidden
+		+sm
+			padding: 0
+			+fs(100%)
+		&:not(:last-child)
+			margin-bottom: 40px
+	&__title
+		margin-bottom: 25px
+		font-weight: 500
+		+fr
+		font-size: 25px
+		line-height: 1.3
+		letter-spacing: -.02em
+		color: #181A21
+	&__list
+		font-size: 16px
+		line-height: 1.18
+		li
+			display: block
+			&:not(:last-child)
+				margin-bottom: 25px
+		a
+			color: currentColor
+			transition: color .3s, border-color .3s
+			border-bottom: 1px solid transparent
+			+hover
+				color: #01AFF0
+				border-color: #01AFF0
+	&__btn-col
+		width: 180px
+		flex-shrink: 0
+		align-self: flex-end
+		+sm
+			width: 100%
+
 
 .nav
 	font-weight: 500
 	font-size: 16px
+	+lg
+		font-size: 18px
+		line-height: 1.2
 	&__list
 		display: flex
 		flex-wrap: wrap
-	li
-		&:not(:last-child)
-			margin-right: 35px
-	a
-		color: currentColor
-		transition: opacity .3s
-		+hover
-			opacity: .6
+		.header__nav &
+			+lg
+				flex-direction: column
+		li
+			&:not(:last-child)
+				margin-right: 35px
+				+lg
+					margin: 0 0 25px
+		a
+			color: currentColor
+			transition: opacity .3s
+			+hover
+				opacity: .6
+			&.is-active
+				font-weight: 500
 .soc
 	flex-wrap: wrap
 	display: flex
 	&__item
 		&:not(:last-child)
 			margin-right: 15px
+			+lg
+				margin-right: 10px
 		a
 			width: 50px
 			height: 50px
-			line-height: 50px
+			line-height: 52px
 			text-align: center
 			border-radius: 10px
 			transition: background-color .3s
 			background-color: rgba(#1C1E25, .2)
 			display: block
+			+lg
+				height: 40px
+				width: 40px
+				line-height: 39px
+				border-radius: 8px
 			+hover
 				background-color: rgba(#1C1E25, .15)
 			.soc_white &
@@ -115,6 +301,16 @@
 					background-color: rgba(#fff, .15)
 		img
 			max-width: 80%
-			max-width: 80%
+			max-height: 80%
 			vertical-align: middle
 			display: inline-block
+			+lg
+				max-width: 50%
+				max-height: 50%
+	.fab
+		color: #1C1E25
+		font-size: 18px
+	&_white
+		.fab
+			color: #fff
+

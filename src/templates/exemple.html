@@ -10,11 +10,21 @@ title: Doctor
 		<div class="topic">
 			<a href="#" class="topic__link">Примеры работ</a>
 		</div>
-		<div class="wrap wrap_pt0">
+		<div class="wrap wrap_pt0 wrap_mdpb0">
 			<div class="main-col">
 				<article>
 					<h3>Элина Абдрашитова — спинально-мышечная амиотрофия Верднига-Гофмана</h3>
 					<div class="date">31.09.2018</div>
+					<div class="patientdescription md-show">
+						<div class="patientdescription__field">
+							<div class="patientdescription__label">Пациент:</div>
+							<p>Девушка 35 лет, г. Оренбург</p>
+						</div>
+						<div class="patientdescription__field">
+							<div class="patientdescription__label">Диагноз:</div>
+							<p>Спинальная мышечная атрофия Кугельберга-Веландера</p>
+						</div>
+					</div>
 					<img src="./img/article-img.jpg" alt="article-img">
 					<p>Диагноз СМА был поставлен пациентке в самом раннем детстве, в 3 года. Несмотря на то, что девочка родилась и развивалась, как здоровый ребенок, с 3 лет родители заметили, что ребенок стал падать и не бегает, как другие дети, забив тревогу и многочисленные походы к врачам, получили не утешительный диагноз.</p>
 					<p>В возрасте 8-ми лет появились первые признаки деформации позвоночника, к 10-ти годам деформация стало заметной. И так с каждым годом деформация позвоночника становилась больше и больше. А мышцы спины становились слабее и слабее. К 20-ти годам развился тяжёлый нейромышечный грудо-пояснично-крестцовый кифосколиоз. Появились множество проблем со здоровьем, высокое давление, одышка, боль в сердце.</p>
@@ -30,14 +40,14 @@ title: Doctor
 					{% for i in range(0,7) %}
 					    <div class="simpleslider__slide">
 					    	<a href="#" class="simpleslider__img">
-					    		<img src="./img/article-img-slider.jpg" alt="img">
+					    		<img src="./img/article-img-slider.jpg" href="http://via.placeholder.com/1750x850" data-fancybox="gallery-interior" alt="img">
 					    	</a>
 					    </div>
 					{% endfor %}
 				</div>
 			</div>
 			<div class="sidebar">
-				<div class="patientdescription">
+				<div class="patientdescription md-hide">
 					<div class="patientdescription__field">
 						<div class="patientdescription__label">Пациент:</div>
 						<p>Девушка 35 лет, г. Оренбург</p>

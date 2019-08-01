@@ -1,9 +1,14 @@
 .articles
 	&__col
 		margin-bottom: 60px
+		+sm
+			margin-bottom: 30px
 	&__footer
 		margin-top: 20px
 		text-align: center
+		.btn
+			+sm
+				width: 100%
 .item
 	color: #181A21
 	display: block
@@ -34,8 +39,13 @@
 		+f(21px,600,1.19)
 		min-height: 50px
 		transition: color .3s
+		+sm
+			min-height: 0
+			font-size: 16px
 		&:not(:last-child)
 			margin-bottom: 10px
+			+sm
+				margin-bottom: 15px
 		&_sm
 			+f(18px,600,1.44)
 	&__content
@@ -43,9 +53,12 @@
 	&__date
 		margin-top: 20px
 		color: #656674
+		+sm
+			margin-top: 15px
 
 .itemsm
 	display: flex
+	align-items: center
 	color: #181A21
 	+hover
 		.itemsm__img img
@@ -60,6 +73,8 @@
 	&__title
 		margin-bottom: 10px
 		letter-spacing: 0
+		max-height: 44px
+		overflow: hidden
 		+f(18px,600,1.2)
 		display: block
 		transition: color .3s

@@ -37,15 +37,26 @@
 .wrap
 	padding: 60px 0 80px
 	display: flex
+	+md
+		padding: 50px 0 40px
+		display: block
 	&_pt0
 		padding-top: 0
+	&_mdpb0
+		+md
+			padding-bottom: 0
 .main-col
 	flex-grow: 1
 	overflow: hidden
+	+md
+		overflow: visible
 .sidebar
 	margin-left: 40px
 	flex-shrink: 0
 	width: 350px
+	+md
+		margin: 40px 0 0
+		width: auto
 	.title-md,
 	.item
 		&:not(:last-child)
@@ -54,7 +65,13 @@
 		&:not(:last-child)
 			margin-bottom: 20px
 	&__field
+		+md
+			margin-bottom: 60px
 		&:not(:first-child)
 			margin-top: 40px
+			+md
+				margin-top: 60px
 		&:not(:last-child)
 			margin-bottom: 40px
+			+md
+				margin-bottom: 60px

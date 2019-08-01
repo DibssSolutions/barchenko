@@ -15,7 +15,7 @@
     <!-- BEGIN content -->
     <div class="out">
       <!-- begin header -->
-      <header class="header">
+      <header class="header js-header">
         <div class="header__top">
           <div class="header__inner inner">
             <a href="/" class="header__logo logo">
@@ -25,8 +25,8 @@
                 <span class="logo__bottom">Лечение заболеваний позвоночника</span>
               </h1>
             </a>
-            <div class="header__address"><span>Адрес </span>Москва, ул. Пушкина д. 38, корп. 2</div>
-            <div class="header__soc">
+            <div class="header__address lg-hide"><span>Адрес </span>Москва, ул. Пушкина д. 38, корп. 2</div>
+            <div class="header__soc lg-hide">
               <a href="#" class="btn btn_icon">
                 <img src="./img/skype.svg" alt="icon" class="btn__icon">
                 <span>Консультация</span>
@@ -37,17 +37,55 @@
                 <li class="soc__item"><a href="#"><img src="./img/vk.svg" alt="icon"></a></li>
               </ul>
             </div>
+            <button class="btn-menu lg-show js-btn-menu" type="button">
+              <span class="btn-menu__wrap">
+                <span class="btn-menu__line"></span>
+                <span class="btn-menu__line"></span>
+                <span class="btn-menu__line"></span>
+              </span>
+            </button>
           </div>
         </div>
         <div class="header__bottom">
           <div class="header__inner inner">
-            <div class="header__servicesmenu servicesmenu">
-              <button class="servicesmenu__trigger" type="button">
+            <div class="header__servicesmenu servicesmenu js-servicesmenu">
+              <button class="servicesmenu__trigger js-servicesmenu-trigger" type="button">
                 <svg class="icon icon-list">
                   <use xlink:href="img/sprite.svg#icon-list"></use>
                 </svg>
                 <span>Услуги</span>
               </button>
+              <div class="servicesmenu__menu">
+                <div class="servicesmenu__inner inner">
+                  <div class="servicesmenu__wrap js-servicesmenu-wrap">
+                    <div class="servicesmenu__col">
+                      <div class="servicesmenu__title">Консервативное лечение</div>
+                      <ul class="servicesmenu__list">
+                        <li><a href="#">Хронические и острые боли в спине</a></li>
+                        <li><a href="#">Межреберная невралгия</a></li>
+                        <li><a href="#">Невралгия тройничного нерва</a></li>
+                        <li><a href="#">Грыжа межпозвоночного диска</a></li>
+                        <li><a href="#">Дисфункция крестцово-подвздошного cустава</a></li>
+                        <li><a href="#">Синдром позвоночной артерии</a></li>
+                      </ul>
+                    </div>
+                    <div class="servicesmenu__col">
+                      <div class="servicesmenu__title">Хирургическое лечение</div>
+                      <ul class="servicesmenu__list">
+                        <li><a href="#">Коррекция сколиоза любой этипологии</a></li>
+                        <li><a href="#">Радиочастотная абляция фасеточных суставов</a></li>
+                        <li><a href="#">Эндоскопическое удаление грыжи диска</a></li>
+                        <li><a href="#">Вертебропластика</a></li>
+                        <li><a href="#">Микрохирургическое удаление грыжи диска</a></li>
+                        <li><a href="#">Операции при сужении позвоночного канала (стенозе)</a></li>
+                      </ul>
+                    </div>
+                    <div class="servicesmenu__btn-col">
+                      <a href="#" class="btn btn_md btn_black-mod btn_full">Все услуги</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <nav class="header__nav nav">
               <ul class="nav__list">
@@ -73,8 +111,23 @@
                   <a href="#">Контакты</a>
                 </li>
               </ul>
+              <a href="tel:+7(916)0550800" class="header__phone lg-show">+7 (916) 055-08-00</a>
+              <div class="header__address lg-show"><span>Адрес </span>Москва, ул. Пушкина д. 38, корп. 2</div>
+              <div class="lg-show">
+                <div class="header__soc">
+                  <a href="#" class="btn btn_icon">
+                    <img src="./img/skype.svg" alt="icon" class="btn__icon">
+                    <span>Консультация</span>
+                  </a>
+                  <ul class="soc soc_white">
+                    <li class="soc__item"><a href="#"><img src="./img/instagram-white.svg" alt="icon"></a></li>
+                    <li class="soc__item"><a href="#"><img src="./img/play-white.svg" alt="icon"></a></li>
+                    <li class="soc__item"><a href="#"><img src="./img/vk-white.svg" alt="icon"></a></li>
+                  </ul>
+                </div>
+              </div>
             </nav>
-            <a href="tel:+7(916)0550800" class="header__phone">+7 (916) 055-08-00</a>
+            <a href="tel:+7(916)0550800" class="header__phone header__phone_lgicon"><img class="lg-show" src="./img/phone.svg" alt="phone">+7 (916) 055-08-00</a>
             </nav>
           </div>
       </header>
@@ -117,7 +170,7 @@
               </div>
             </div>
           </div>
-          <div class="sidebar">
+          <div class="sidebar lg-hide">
             <form class="form form_appointment">
               <h3 class="form__title">Запишитесь на прием к докутору</h3>
               <div class="form-field">
@@ -156,7 +209,7 @@
           <p>2003 г. – специализация по травматологии-ортопедии.</p>
         </article>
         <div class="section section_simpleslider">
-          <div class="section__title title">Повышение квалификации</div>
+          <div class="section__title title">Дипломы</div>
           <div class="simpleslider js-simpleslider">
             <div class="simpleslider__slide">
               <a href="#" class="simpleslider__img">
@@ -209,7 +262,7 @@
             </div>
           </div>
         </div>
-        <div class="wrap">
+        <div class="wrap wrap_mdpb0">
           <div class="main-col">
             <!-- begin section -->
             <div class="section section_p0">
@@ -218,13 +271,21 @@
               <div class="reviews">
                 <!-- begin review -->
                 <div class="review review_mb review_lg">
-                  <div class="review__logo">
+                  <div class="sm-show">
+                    <div class="review__hero">
+                      <div class="review__avatar">
+                        <img src="./img/review-avatar.png" alt="avatar">
+                      </div>
+                      <div class="review__name">Danny Peters</div>
+                    </div>
+                  </div>
+                  <div class="review__logo sm-hide">
                     <img src="./img/review-img-2.jpg" alt="avatar">
                   </div>
                   <div class="review__out">
-                    <div class="review__hero review__hero_sb">
+                    <div class="review__hero review__hero_sb sm-hide">
                       <div class="review__name">Danny Peters</div>
-                      <div class="review__rating">rating</div>
+                      <div class="review__rating"><input type="hidden" class="js-rating rating" value="4" data-readonly /></div>
                     </div>
                     <p class="review__text">I have been questioned by many people to disclose some of the greatest traffic generating techniques that I know of. I am not to immediate to reveal them because I know the majority doesn’t even take battle on them. </p>
                     <div class="review__images js-review-images">
@@ -255,13 +316,21 @@
                 <!-- end review -->
                 <!-- begin review -->
                 <div class="review review_mb review_lg">
-                  <div class="review__logo">
+                  <div class="sm-show">
+                    <div class="review__hero">
+                      <div class="review__avatar">
+                        <img src="./img/review-avatar.png" alt="avatar">
+                      </div>
+                      <div class="review__name">Danny Peters</div>
+                    </div>
+                  </div>
+                  <div class="review__logo sm-hide">
                     <img src="./img/review-img-2.jpg" alt="avatar">
                   </div>
                   <div class="review__out">
-                    <div class="review__hero review__hero_sb">
+                    <div class="review__hero review__hero_sb sm-hide">
                       <div class="review__name">Danny Peters</div>
-                      <div class="review__rating">rating</div>
+                      <div class="review__rating"><input type="hidden" class="js-rating rating" value="4" data-readonly /></div>
                     </div>
                     <p class="review__text">I have been questioned by many people to disclose some of the greatest traffic generating techniques that I know of. I am not to immediate to reveal them because I know the majority doesn’t even take battle on them. </p>
                     <div class="review__images js-review-images">
@@ -292,13 +361,21 @@
                 <!-- end review -->
                 <!-- begin review -->
                 <div class="review review_mb review_lg">
-                  <div class="review__logo">
+                  <div class="sm-show">
+                    <div class="review__hero">
+                      <div class="review__avatar">
+                        <img src="./img/review-avatar.png" alt="avatar">
+                      </div>
+                      <div class="review__name">Danny Peters</div>
+                    </div>
+                  </div>
+                  <div class="review__logo sm-hide">
                     <img src="./img/review-img-2.jpg" alt="avatar">
                   </div>
                   <div class="review__out">
-                    <div class="review__hero review__hero_sb">
+                    <div class="review__hero review__hero_sb sm-hide">
                       <div class="review__name">Danny Peters</div>
-                      <div class="review__rating">rating</div>
+                      <div class="review__rating"><input type="hidden" class="js-rating rating" value="4" data-readonly /></div>
                     </div>
                     <p class="review__text">I have been questioned by many people to disclose some of the greatest traffic generating techniques that I know of. I am not to immediate to reveal them because I know the majority doesn’t even take battle on them. </p>
                     <div class="review__images js-review-images">
@@ -372,7 +449,7 @@
             <div class="footer__contacts">
               <div class="footer__field">
                 <div class="footer__label">Телефон</div>
-                <div class="footer__item">+7 (916) 055-08-00</div>
+                <div class="footer__item footer__item_tel">+7 (916) 055-08-00</div>
               </div>
               <div class="footer__field">
                 <div class="footer__label">Адрес</div>
@@ -392,7 +469,7 @@
         <div class="footer__middle">
           <div class="footer__inner inner">
             <div class="footer__row row">
-              <div class="footer__col col col-4">
+              <div class="footer__col col col-4 col-md-12">
                 <div class="footer__title">Карта сайта</div>
                 <nav class="footer__nav nav">
                   <ul class="nav__list">
@@ -420,7 +497,7 @@
                   </ul>
                 </nav>
               </div>
-              <div class="footer__col col col-4">
+              <div class="footer__col col col-4 col-md-12">
                 <div class="footer__title">Услуги</div>
                 <nav class="footer__services nav">
                   <ul class="nav__list">
@@ -439,7 +516,7 @@
                   </ul>
                 </nav>
               </div>
-              <div class="footer__col col col-4">
+              <div class="footer__col col col-4 col-md-12">
                 <div class="footer__buttons">
                   <a href="#" class="btn btn_green btn_full"><span>Заказать звонок</span></a>
                   <a href="#" class="btn btn_blue btn_sm btn_icon btn_full">

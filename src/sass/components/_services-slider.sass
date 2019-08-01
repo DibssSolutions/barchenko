@@ -1,5 +1,6 @@
 .services-slider
 	position: relative
+	height: 100%
 	padding: 56px 62px 100px 62px
 	color: #fff
 	background: #01AFF0
@@ -7,6 +8,9 @@
 	background-size: cover
 	background-position: center
 	background-image: url("data:image/svg+xml,%0A%3Csvg width='600px' height='702px' viewBox='0 0 600 702' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Главная' transform='translate(-100.000000, -1386.000000)'%3E%3Cg id='Group-52' transform='translate(100.000000, 1284.000000)'%3E%3Cg id='Group-26' transform='translate(0.000000, 102.000000)'%3E%3Cg id='Group-25'%3E%3Cg id='Group-21'%3E%3Cpath d='M-225.000574,115.850863 C-283.66622,65.7715439 -264.111005,39.3010466 -166.334929,36.4393713 C-19.6708151,32.1468582 102.668519,-17.9324608 52.5880898,115.850863 C19.201137,205.039745 -73.3284177,205.039745 -225.000574,115.850863 Z' id='Path-2-Copy-3' fill='%23000000' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M404.840939,669.071199 C335.790381,610.172881 358.807234,579.040912 473.891497,575.675294 C646.517892,570.626867 790.513567,511.728548 731.567969,669.071199 C692.270904,773.9663 583.361893,773.9663 404.840939,669.071199 Z' id='Path-2-Copy-4' fill='%233BE9CC' opacity='0.400000006' transform='translate(555.500000, 654.242525) rotate(-75.000000) translate(-555.500000, -654.242525) '%3E%3C/path%3E%3Cpath d='M109.840939,-88.9288008 C40.7903809,-147.827119 63.8072335,-178.959088 178.891497,-182.324706 C351.517892,-187.373133 495.513567,-246.271452 436.567969,-88.9288008 C397.270904,15.9663 288.361893,15.9663 109.840939,-88.9288008 Z' id='Path-2-Copy-5' fill='%2351CEB6' opacity='0.200000003' transform='translate(260.500000, -103.757475) rotate(-75.000000) translate(-260.500000, 103.757475) '%3E%3C/path%3E%3Cpath d='M-81.2766051,14.9920184 C-140.306633,-35.402265 -120.629957,-62.0392433 -22.2465767,-64.9189166 C125.328494,-69.2384266 248.4277,-119.63271 198.036212,14.9920184 C164.441887,104.741837 71.3376147,104.741837 -81.2766051,14.9920184 Z' id='Path-2-Copy' fill='%2325E7C7' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M273.76791,888.708571 C189.434577,653.375237 216.76791,570.208571 355.76791,639.208571 C564.26791,742.708571 679.676606,629.271478 629.285119,763.896207 C595.690794,853.646026 477.185058,895.250147 273.76791,888.708571 Z' id='Path-2-Copy-2' fill='%23FFFFFF' opacity='0.200000003'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+	+sm
+		margin: 0 -15px
+		padding: 25px 15px 64px
 	&__list
 		position: relative
 		font-size: 0
@@ -22,6 +26,9 @@
 		+fr
 		letter-spacing: -0.01em
 		text-align: left
+		+sm
+			margin-bottom: 15px
+			font-size: 18px
 	.slick-arrow
 		position: absolute
 		bottom: 30px
@@ -33,6 +40,12 @@
 		background-color: #fff
 		border-radius: 6px
 		transition: transform .3s, opacity .3s
+		+sm
+			width: 24px
+			height: 24px
+			right: 15px
+			bottom: 21px
+			border-radius: 4px
 		+hover
 			opacity: .7
 		&:before
@@ -42,8 +55,12 @@
 			left: 50%
 			transform: translate(-38%,-50%)
 			+arr(9,14,#01AFF0,r)
+			+sm
+				+arr(6,9,#01AFF0,r)
 	.slick-prev
 		right: 112px
+		+sm
+			right: 45px
 		&:before
 			transform: translate(-62%,-50%) rotate(180deg)
 	.slick-dots
@@ -52,9 +69,14 @@
 		bottom: 42px
 		flex-wrap: wrap
 		display: flex
+		+sm
+			left: 15px
+			bottom: 28px
 		li
 			&:not(:last-child)
 				margin-right: 10px
+				+sm
+					margin-right: 6px
 			&.slick-active button
 				transform: scale(1)
 				opacity: 1
@@ -85,6 +107,10 @@
 	border-radius: 6px
 	transition: background-color .3s
 	display: block
+	+sm
+		padding: 11px 9px
+		font-size: 14px
+		line-height: 1.3
 	+hover
 		background-color: darken(#008CC0, 10%)
 	&_green

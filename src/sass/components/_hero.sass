@@ -1,10 +1,13 @@
 .hero
 	position: relative
 	padding: 94px 0
+	font-weight: 600
 	color: #fff
 	background-size: cover
 	background-position: center
 	background-repeat: no-repeat
+	+sm
+		padding: 236px 0 40px
 	&:before
 		position: absolute
 		content: ''
@@ -20,10 +23,19 @@
 		max-width: 575px
 	&__title
 		margin-bottom: 28px
+		+sm
+			margin-bottom: 18px
+			font-size: 25px
+			line-height: 1
 	&__footer
 		margin-top: 40px
 		align-items: center
 		display: flex
+		+sm
+			margin-top: 26px
 	&__inf
 		margin-left: 20px
 		font-weight: 700
+		span
+			+sm
+				display: none

@@ -30,7 +30,7 @@ title: Contacts
 	</div>
 	<!-- end contacts -->
 	<!-- begin consultation -->
-	<div class="consultation">
+	<div class="consultation md-hide">
 		<div class="consultation__inner inner consultation__inner_cont">
 			<div class="consultation__content">
 				<div class="consultation__wrap">
@@ -91,6 +91,9 @@ title: Contacts
 		</div>
 	</div>
 	<!-- end consultation -->
+	<div class="md-show">
+		{% include "partials/_anappointment-form.html" %}
+	</div>
 	{% include "partials/_footer.html" %}
 
 {% endblock %}

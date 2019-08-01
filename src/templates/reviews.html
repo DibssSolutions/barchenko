@@ -7,7 +7,7 @@ title: Reviews
 	
 	{% include "partials/_header.html" %}
 	<div class="inner">
-		<div class="wrap">
+		<div class="wrap wrap_mdpb0">
 			<div class="main-col">
 				<!-- begin section -->
 				<div class="section section_p0">
@@ -20,13 +20,21 @@ title: Reviews
 						{% for i in range(0,4) %}
 						<!-- begin review -->
 						<div class="review review_mb review_lg">
-					    	<div class="review__logo">
+							<div class="sm-show">
+								<div class="review__hero">
+									<div class="review__avatar">
+										<img src="./img/review-avatar.png" alt="avatar">
+									</div>
+									<div class="review__name">Danny Peters</div>
+								</div>
+							</div>
+					    	<div class="review__logo sm-hide">
 					    		<img src="./img/review-img-2.jpg" alt="avatar">
 					    	</div>
 					    	<div class="review__out">
-					    		<div class="review__hero review__hero_sb">
+					    		<div class="review__hero review__hero_sb sm-hide">
 					    			<div class="review__name">Danny Peters</div>
-					    			<div class="review__rating">rating</div>
+					    			<div class="review__rating"><input type="hidden" class="js-rating rating" value="4" data-readonly/></div>
 					    		</div>
 					    		<p class="review__text">I have been questioned by many people to disclose some of the greatest traffic generating techniques that I know of. I am not to immediate to reveal them because I know the majority doesn’t even take battle on them. </p>
 					    		<div class="review__images js-review-images">

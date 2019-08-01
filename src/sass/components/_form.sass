@@ -5,6 +5,9 @@
 		background: #01AFF0
 		box-shadow: 0 22px 66px -13px #E0E3E2
 		border-radius: 8px
+		+md
+			margin: 0 -15px 
+			border-radius: 0
 	&__title
 		position: relative
 		z-index: 1
@@ -35,6 +38,11 @@
 .form-col
 	padding: 0 10px
 	+fs(50%)
+	+sm
+		+fs(100%)
+	&:not(:last-child)
+		+sm
+			margin-bottom: 30px
 .form-control
 	position: relative
 	font-size: 0
@@ -73,5 +81,9 @@
 	&__btn-file
 		margin-right: 30px
 		flex-grow: 1
+		+sm
+			margin: 0 0 30px
 	&__submit
 		flex-shrink: 0
+		+sm
+			width: 100%

@@ -1,6 +1,8 @@
 .error404
 	padding: 50px 0 100px
 	text-align: center
+	+sm
+		padding: 30px 15px 60px
 	&__inner
 		margin: 0 auto
 		max-width: 530px
@@ -19,7 +21,14 @@
 		+fr
 		letter-spacing: -0.02em
 		+f(36px,400,1.2)
+		+sm
+			font-size: 25px
 	&__text
 		color: #9799A5
 	&__footer
 		margin-top: 40px
+		+sm
+			margin-top: 36px
+		.btn
+			+sm
+				width: 100%

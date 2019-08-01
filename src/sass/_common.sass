@@ -1,18 +1,23 @@
 body
 	+fmt
-	min-width: 1240px
+	min-width: 375px
 	color: #181A21
 	+f(16px,500,1.875)
 	+font-smoothing
-	+fadeout(.2s)
+	// +fadeout(.2s)
 	background: $white
-	&.is-loaded
-		+fadein
+	// &.is-loaded
+	// 	+fadein
+	+sm
+		font-size: 14px
+		line-height: 1.7
 
 .title
 	+fr
 	+f(44px,400,1.2)
 	letter-spacing: -0.02em
+	+sm
+		font-size: 30px
 
 .title-md
 	+fr
@@ -21,28 +26,59 @@ body
 
 .section
 	padding: 40px 0
+	+sm
+		padding: 30px 0
 	&_first
 		padding-top: 60px
+		+sm
+			padding-top: 40px
 	&_last
 		padding-bottom: 80px
+		+sm
+			padding-bottom: 60px
 	&_pt0
 		padding-top: 0
+		+sm
+			padding-top: 0
 	&_p0
 		padding: 0
+		+sm
+			padding: 0
+	&_mdpb0
+		+md
+			padding-bottom: 0
+		+sm
+			padding-bottom: 0
 	&_simpleslider
 		padding: 80px 0 20px
+		+sm
+			padding: 40px 0 10px
 	&__title
 		margin-bottom: 50px
+		+sm
+			margin-bottom: 40px
+		.section_first &
+			+sm
+				margin-bottom: 20px
 	&__head
 		margin-bottom: 40px
+		+sm
+			margin-bottom: 20px
 		.section__title
 			margin-bottom: 15px
+	&__col
+		&_md-mb20
+			&:not(:last-child)
+				+md
+					margin-bottom: 20px
 
 .text-left
 	text-align: left !important
 
 .topic
 	padding: 60px 0 50px
+	+sm
+		padding: 50px 0 40px
 	&__link
 		position: relative
 		margin-left: 33px
@@ -51,6 +87,8 @@ body
 		color: #181A21
 		transition: color .3s
 		letter-spacing: -0.002em
+		+sm
+			font-size: 30px
 		+hover
 			color: #01aff0
 			&:before
@@ -62,6 +100,8 @@ body
 			left: -33px
 			+arr(9,14,#181A21,l)
 			transition: border-color .3s
+			+sm
+				top: 11px
 
 .date
 	color: #656674
@@ -72,25 +112,44 @@ article
 	h1,h2
 		&:not(:first-child)
 			margin-top: 80px
+			+sm
+				margin-top: 40px
 		&:not(:last-child)
 			margin-bottom: 30px
+			+sm
+				margin-bottom: 20px
+				line-height: 1.16
 	h3, h4,h5,h6
 		&:not(:first-child)
 			margin-top: 30px
+			+sm
+				margin-top: 20px
 		&:not(:last-child)
 			margin-bottom: 20px
+			+sm
+				margin-bottom: 10px
 	h1
 		+f(54px,400,1.2)
 	h2
 		+f(44px,400,1.2)
+		+sm
+			font-size: 25px
 	h3
 		+f(30px,400,1.3)
+		+sm
+			font-size: 21px
 	h4
 		+f(24px,500,1.3)
+		+sm
+			font-size: 18px
 	h5
 		+f(22px,600,1.3)
+		+sm
+			font-size: 16px
 	h6
 		+f(18px,700,1.3)
+		+sm
+			font-size: 14px
 	p
 		&:not(:last-child)
 			margin-bottom: 15px
@@ -98,6 +157,10 @@ article
 		padding: 30px 40px 30px
 		background: #FEEBEF
 		border-radius: 6px
+		+sm
+			margin-left: -15px
+			margin-right: -15px
+			padding: 30px 15px
 		&:not(:first-child)
 			margin-top: 30px
 		&:not(:last-child)
@@ -122,8 +185,10 @@ article
 				height: 3px
 				border-radius: 50%
 				background-color: #181A21
-	img
+	img,
+	figure
 		max-width: 100%
+		height: auto
 		display: block
 		&:not(:first-child)
 			margin-top: 35px
@@ -133,6 +198,12 @@ article
 		& + h2:not(:first-child),
 		& + h3:not(:first-child)
 			margin-top: 30px
+	a
+		color: #01AFF0
+		border-bottom: 1px solid transparent
+		transition: border-color .3s
+		+hover
+			border-color: #01AFF0
 	.date
 		margin-bottom: 30px
 	.simpleslider
@@ -140,3 +211,47 @@ article
 			margin-top: 40px
 		&:not(:last-child)
 			margin-bottom: 20px
+.lg-show
+	display: none !important
+	+lg
+		display: block !important
+.lg-hide
+	+lg
+		display: none !important
+.md-show
+	display: none !important
+	+md
+		display: block !important
+.md-hide
+	+md
+		display: none !important
+
+.sm-show
+	display: none !important
+	+sm
+		display: block !important
+.sm-hide
+	+sm
+		display: none !important
+
+
+.pagination
+	margin-top: 20px
+	text-align: center
+	a
+		color: currentColor
+		transition: color .3s
+		+hover
+			color: #01AFF0
+	.page-numbers
+		margin: 0 5px
+	.current
+		color: #01AFF0
+	.next
+		margin: 0 0 0 40px
+		+sm
+			display: none
+	.prev
+		margin: 0 40px 0 0
+		+sm
+			display: none

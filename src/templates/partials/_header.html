@@ -1,5 +1,5 @@
 <!-- begin header -->
-<header class="header">
+<header class="header js-header">
 	<div class="header__top">
 		<div class="header__inner inner">
 			<a href="/" class="header__logo logo">
@@ -9,8 +9,8 @@
 					<span class="logo__bottom">Лечение заболеваний позвоночника</span>
 				</h1>
 			</a>
-			<div class="header__address"><span>Адрес </span>Москва, ул. Пушкина д. 38, корп. 2</div>
-			<div class="header__soc">
+			<div class="header__address lg-hide"><span>Адрес </span>Москва, ул. Пушкина д. 38, корп. 2</div>
+			<div class="header__soc lg-hide">
 				<a href="#" class="btn btn_icon">
 					<img src="./img/skype.svg" alt="icon" class="btn__icon">
 					<span>Консультация</span>
@@ -21,15 +21,53 @@
 					<li class="soc__item"><a href="#"><img src="./img/vk.svg" alt="icon"></a></li>
 				</ul>
 			</div>
+			<button class="btn-menu lg-show js-btn-menu" type="button">
+				<span class="btn-menu__wrap">
+					<span class="btn-menu__line"></span>
+					<span class="btn-menu__line"></span>
+					<span class="btn-menu__line"></span>
+				</span>
+			</button>
 		</div>
 	</div>
 	<div class="header__bottom">
 		<div class="header__inner inner">
-			<div class="header__servicesmenu servicesmenu">
-				<button class="servicesmenu__trigger" type="button">
+			<div class="header__servicesmenu servicesmenu js-servicesmenu">
+				<button class="servicesmenu__trigger js-servicesmenu-trigger" type="button">
 					{{ mixins.icon('list') }}
 					<span>Услуги</span>
 				</button>
+				<div class="servicesmenu__menu">
+					<div class="servicesmenu__inner inner">
+						<div class="servicesmenu__wrap js-servicesmenu-wrap">
+							<div class="servicesmenu__col">
+								<div class="servicesmenu__title">Консервативное лечение</div>
+								<ul class="servicesmenu__list">
+									<li><a href="#">Хронические и острые боли в спине</a></li>
+									<li><a href="#">Межреберная невралгия</a></li>
+									<li><a href="#">Невралгия тройничного нерва</a></li>
+									<li><a href="#">Грыжа межпозвоночного диска</a></li>
+									<li><a href="#">Дисфункция крестцово-подвздошного cустава</a></li>
+									<li><a href="#">Синдром позвоночной артерии</a></li>
+								</ul>
+							</div>
+							<div class="servicesmenu__col">
+								<div class="servicesmenu__title">Хирургическое лечение</div>
+								<ul class="servicesmenu__list">
+									<li><a href="#">Коррекция сколиоза любой этипологии</a></li>
+									<li><a href="#">Радиочастотная абляция фасеточных суставов</a></li>
+									<li><a href="#">Эндоскопическое удаление грыжи диска</a></li>
+									<li><a href="#">Вертебропластика</a></li>
+									<li><a href="#">Микрохирургическое удаление грыжи диска</a></li>
+									<li><a href="#">Операции при сужении позвоночного канала (стенозе)</a></li>
+								</ul>
+							</div>
+							<div class="servicesmenu__btn-col">
+								<a href="#" class="btn btn_md btn_black-mod btn_full">Все услуги</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<nav class="header__nav nav">
 				<ul class="nav__list">
@@ -39,8 +77,23 @@
 					</li>
 					{% endfor %}
 				</ul>
+				<a href="tel:+7(916)0550800" class="header__phone lg-show">+7 (916) 055-08-00</a>
+				<div class="header__address lg-show"><span>Адрес </span>Москва, ул. Пушкина д. 38, корп. 2</div>
+				<div class="lg-show">
+					<div class="header__soc">
+						<a href="#" class="btn btn_icon">
+							<img src="./img/skype.svg" alt="icon" class="btn__icon">
+							<span>Консультация</span>
+						</a>
+						<ul class="soc soc_white">
+							<li class="soc__item"><a href="#"><img src="./img/instagram-white.svg" alt="icon"></a></li>
+							<li class="soc__item"><a href="#"><img src="./img/play-white.svg" alt="icon"></a></li>
+							<li class="soc__item"><a href="#"><img src="./img/vk-white.svg" alt="icon"></a></li>
+						</ul>
+					</div>
+				</div>
 			</nav>
-			<a href="tel:+7(916)0550800" class="header__phone">+7 (916) 055-08-00</a>
+			<a href="tel:+7(916)0550800" class="header__phone header__phone_lgicon"><img class="lg-show" src="./img/phone.svg" alt="phone">+7 (916) 055-08-00</a>
 		</nav>
 	</div>
 </header>

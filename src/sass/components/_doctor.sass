@@ -1,6 +1,8 @@
 .doctor
 	align-items: center
 	display: flex
+	+md
+		flex-direction: column
 	&:not(:last-child)
 		margin-bottom: 50px
 	&__img
@@ -8,6 +10,10 @@
 		background: #EDEFF3
 		border-radius: 8px
 		overflow: hidden
+		+md
+			margin-bottom: 15px
+		+sm
+			+fs(100%)
 		img
 			width: 100%
 			height: 90%
@@ -27,14 +33,38 @@
 			display: block
 	&__wrap
 		padding-left: 50px
+		+md
+			padding-left: 0
 	&__hero
 		display: flex
+		+md
+			flex-direction: column
 	&__hero-left
 		+fs(65%)
+		+md
+			margin-top: 20px
+			+fs(100%)
+	&__hero-right
+		text-align: right
+		+fs(35%)
+		+md
+			+fs(100%)
+			order: -1
+			text-align: left
+			justify-content: space-between
+			display: flex
+			flex-wrap: wrap
+			align-items: flex-start
 	&__name
 		+fr
 		+f(30px,500,1.2)
 		display: inline-block
+		+md
+			display: flex
+			justify-content: space-between
+		+sm
+			font-size: 21px
+			line-height: 1.2
 	&__specializations
 		margin-right: -15px
 	&__experience
@@ -43,25 +73,36 @@
 		font-size: 16px
 		+f(16px,600,1.875)
 		display: inline-block
+		+md
+			align-self: flex-end
 		&_ml0
 			margin-left: 0
-	&__hero-right
-		text-align: right
-		+fs(35%)
 	&__rating
 		margin: 7px 0 7px 0
 		line-height: 1
+		+md
+			order: 2
+			margin: 0 0 0 15px
 		.doctor__out &
 			margin: 0 0 0 10px
 	&__assessment
 		font-weight: 600
 		line-height: 1.625
+		+md
+			order: 1
+			display: block
 	&__quantity
+		+md
+			order: 3
+			+fs(100%)
 	&__row
 		margin-top: 20px
 		.doctor__right &
 			margin-top: 30px
 	&__col
+		&:not(:last-child)
+			+sm
+				margin-bottom: 20px
 		&_mb
 			&:not(:last-child)
 				margin-bottom: 30px
@@ -72,6 +113,11 @@
 		line-height: 2.1
 	&__footer
 		margin-top: 28px
+		+sm
+			margin-top: 13px
+		.btn
+			+sm
+				width: 100%
 	&__out
 		margin-top: 20px
 		justify-content: space-between
@@ -80,15 +126,26 @@
 	&__left
 		+fs(53%)
 		align-self: flex-start
+		+lg
+			+fs(30%)
+		+md
+			margin: 0 auto
+			+fs(100%)
+			max-width: 400px
 	&__right
 		margin-top: 30px
 		padding-left: 40px
 		+fs(47%)
 		align-self: flex-start
+		+lg
+			+fs(70%)
+		+md
+			padding: 0
+			+fs(100%)
 
 .specialization
 	margin: 15px 15px 0 0
-	padding: 13px 20px
+	padding: 13px 19px
 	background-color: rgba(#01AFF0,.1)
 	transition: background-color .3s
 	border-radius: 6px
@@ -97,6 +154,8 @@
 	font-weight: 600
 	color: #01AFF0
 	display: inline-block
+	+sm
+		letter-spacing: -0.035em
 a.specialization
 	+hover
 		background-color: rgba(#01AFF0,.2)

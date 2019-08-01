@@ -32,7 +32,7 @@ title: Doctor
 					<p>Причина — в современном образе жизни. В течение дня мы долгое время проводим в напряжении —  сидя или стоя. Кто-то после работы нагружает себя дальше в спортзале или в бассейне, а кто-то идёт домой и вновь продолжает сидеть, но уже у телевизора. Наша спина не получает полноценного расслабления в течение дня и отвечает нам болью, которая часто отдаёт (иррадиирует) в ногу. Для определения причин боли пациент обращается к специалистам различного профиля.</p>
 				</article>
 			</div>
-			<div class="sidebar">
+			<div class="sidebar md-hide">
 				{% include "partials/_anappointment-form.html" %}
 				<div class="sidebar__field">
 					<div class="title-md">Другие примеры</div>
@@ -53,42 +53,59 @@ title: Doctor
 			</div>
 		</div>
 		<!-- begin section -->
-		<div class="section section_pt0 section_last">
-			<div class="section__inner inner">
-				<h2 class="section__title title">Услуги нашей клиники</h2>
-				<div class="section__row row">
-					<div class="section__col col col-6">
-						<div class="services-slider">
-							<h4 class="services-slider__title">Консервативное лечен</h4>
-							<div class="services-slider__list js-services-slider">
-								{% for i in range(0,3) %}
-								<div class="services-slider__slide">
-									{% for i in range(0,6) %}
-									    <a href="#" class="services-item">Хронические и острые боли в спине</a>
-									{% endfor %}
-								</div>
+		<div class="section section_pt0 section_mdpb0 section_last">
+			<h2 class="section__title title">Услуги нашей клиники</h2>
+			<div class="section__row row">
+				<div class="section__col col col-6 col-md-12 section__col_md-mb20">
+					<div class="services-slider">
+						<h4 class="services-slider__title">Консервативное лечен</h4>
+						<div class="services-slider__list js-services-slider">
+							{% for i in range(0,3) %}
+							<div class="services-slider__slide">
+								{% for i in range(0,6) %}
+								    <a href="#" class="services-item">Хронические и острые боли в спине</a>
 								{% endfor %}
 							</div>
+							{% endfor %}
 						</div>
 					</div>
-					<div class="section__col col col-6">
-						<div class="services-slider services-slider_green">
-							<h4 class="services-slider__title">Херургическое лечени</h4>
-							<div class="services-slider__list js-services-slider">
-								{% for i in range(0,3) %}
-								<div class="services-slider__slide">
-									{% for i in range(0,6) %}
-									    <a href="#" class="services-item services-item_green">Хронические и острые боли в спине</a>
-									{% endfor %}
-								</div>
+				</div>
+				<div class="section__col col col-6 col-md-12 section__col_md-mb20">
+					<div class="services-slider services-slider_green">
+						<h4 class="services-slider__title">Херургическое лечени</h4>
+						<div class="services-slider__list js-services-slider">
+							{% for i in range(0,3) %}
+							<div class="services-slider__slide">
+								{% for i in range(0,6) %}
+								    <a href="#" class="services-item services-item_green">Хронические и острые боли в спине</a>
 								{% endfor %}
 							</div>
+							{% endfor %}
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- end section -->
+		<div class="sidebar md-show">
+			{% include "partials/_anappointment-form.html" %}
+			<div class="sidebar__field">
+				<div class="title-md">Другие примеры</div>
+				{% for i in range(0,5) %}
+				<!-- begin item -->
+				<a href="#" class="itemsm">
+					<span class="itemsm__wrap">
+						<span class="itemsm__title">Party Jokes Startling But Unnecessary</span>
+						<span class="date">31.09.2018</span>
+					</span>
+					<span class="itemsm__img">
+						<img src="./img/article-img.jpg" alt="img">
+					</span>
+				</a>
+				<!-- end item -->
+				{% endfor %}
+			</div>
+		</div>
 	</div>
 	{% include "partials/_footer.html" %}
 
